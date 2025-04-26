@@ -1,22 +1,26 @@
+
 import React from "react";
+import { Link } from "react-router-dom";
 
 const FeatureCard = ({ title, description, tag, tagColor }) => (
-  <div className="border border-zinc-100 shadow-[0px_4px_6px_-1px_rgba(0,0,0,0.10),0px_2px_4px_-1px_rgba(0,0,0,0.06)] bg-white min-w-60 gap-4 grow shrink w-[269px] p-6 border-solid max-md:px-5">
-    <h3 className="text-2xl text-zinc-950 font-semibold leading-none">
-      {title}
-    </h3>
-    <p className="text-xl text-zinc-950 font-normal leading-7 mt-4 pt-1">
-      {description}
-    </p>
-    <div className="justify-between flex w-full gap-[40px_100px] mt-4">
-      <span className={`${tagColor} text-sm font-medium px-4 py-2 rounded-md`}>
-        {tag}
-      </span>
-      <button className="bg-zinc-900 p-2 rounded-md">
-        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7eab1ce2f716be7610069fe37959408796b35acc?placeholderIfAbsent=true" className="w-4 h-4" alt="Arrow icon" />
-      </button>
+  <Link to={`/framework/${title.toLowerCase().replace(/ & /g, '-')}`} className="block">
+    <div className="border border-zinc-100 shadow-[0px_4px_6px_-1px_rgba(0,0,0,0.10),0px_2px_4px_-1px_rgba(0,0,0,0.06)] bg-white min-w-60 gap-4 grow shrink w-[269px] p-6 border-solid max-md:px-5 hover:shadow-md transition-shadow">
+      <h3 className="text-2xl text-zinc-950 font-semibold leading-none">
+        {title}
+      </h3>
+      <p className="text-xl text-zinc-950 font-normal leading-7 mt-4 pt-1">
+        {description}
+      </p>
+      <div className="justify-between flex w-full gap-[40px_100px] mt-4">
+        <span className={`${tagColor} text-sm font-medium px-4 py-2 rounded-md`}>
+          {tag}
+        </span>
+        <button className="bg-zinc-900 p-2 rounded-md">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7eab1ce2f716be7610069fe37959408796b35acc?placeholderIfAbsent=true" className="w-4 h-4" alt="Arrow icon" />
+        </button>
+      </div>
     </div>
-  </div>
+  </Link>
 );
 
 export const Features = () => {

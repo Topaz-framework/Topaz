@@ -1,4 +1,6 @@
+
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const Hero = () => {
   return (
@@ -32,12 +34,16 @@ export const Hero = () => {
             </p>
 
             <div className="flex gap-2.5 mt-4">
-              <button className="flex-1 bg-zinc-100 text-zinc-900 rounded-md py-2 px-4 text-sm font-medium">
-                Detailed journey
-              </button>
-              <button className="flex-1 bg-zinc-900 text-neutral-50 rounded-md py-2 px-4 text-sm font-medium">
-                Quick start
-              </button>
+              <Link to="/framework" className="flex-1">
+                <button className="w-full bg-zinc-100 text-zinc-900 rounded-md py-2 px-4 text-sm font-medium">
+                  Detailed journey
+                </button>
+              </Link>
+              <Link to="/framework" className="flex-1">
+                <button className="w-full bg-zinc-900 text-neutral-50 rounded-md py-2 px-4 text-sm font-medium">
+                  Quick start
+                </button>
+              </Link>
             </div>
           </div>
         </div>

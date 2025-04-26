@@ -1,9 +1,11 @@
+
 import React from "react";
 import { Header } from "@/components/layout/Header";
 import { Hero } from "@/components/sections/Hero";
 import { Features } from "@/components/sections/Features";
 import { Tools } from "@/components/sections/Tools";
 import { Footer } from "@/components/layout/Footer";
+import { Link } from "react-router-dom";
 
 export default function Index() {
   return (
@@ -46,9 +48,11 @@ export default function Index() {
             </div>
 
             <div className="flex gap-2.5 mt-4">
-              <button className="flex-1 bg-zinc-100 text-zinc-900 rounded-md py-2 px-4 text-sm font-medium">
-                See key decisions
-              </button>
+              <Link to="/framework" className="flex-1">
+                <button className="w-full bg-zinc-100 text-zinc-900 rounded-md py-2 px-4 text-sm font-medium">
+                  See key decisions
+                </button>
+              </Link>
               <button className="flex-1 bg-zinc-900 text-neutral-50 rounded-md py-2 px-4 text-sm font-medium">
                 View a short video
               </button>
